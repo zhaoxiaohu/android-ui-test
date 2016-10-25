@@ -36,6 +36,9 @@ public class MyPhotoView extends ViewGroup {
     //
     private static final String tag = MyPhotoView.class.getSimpleName();
 
+    private int mViewItemWidth;
+    private int mViewItemHeight;
+
     @Override
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
         return new MarginLayoutParams(getContext(),
@@ -179,8 +182,8 @@ public class MyPhotoView extends ViewGroup {
                     width = widthSize;
                     height = heightSize;
                 } else {
-                    int viewItemWidth = widthSize / 3;
-                    int viewItemHeight = heightSize / 3;
+                    mViewItemWidth = widthSize / 3;
+                    mViewItemHeight = heightSize / 3;
 
                     for (int i = 0; i < size; i++) {
 
@@ -194,17 +197,17 @@ public class MyPhotoView extends ViewGroup {
 //                        ImageView v = new ImageView(context);
                         LayoutParams params = v.getLayoutParams();
                         if (params == null) {
-                            params = new ViewGroup.LayoutParams(viewItemWidth, viewItemHeight);
+                            params = new ViewGroup.LayoutParams(mViewItemWidth, mViewItemHeight);
                         } else {
-                            params.width = viewItemWidth;
-                            params.height = viewItemHeight;
+                            params.width = mViewItemWidth;
+                            params.height = mViewItemHeight;
                         }
                         v.setLayoutParams(params);
                         addView(v);
                     }
                     // 2--9 item view
                     width = widthSize;
-                    height = ((size - 1) / 3 + 1) * viewItemHeight;
+                    height = ((size - 1) / 3 + 1) * mViewItemHeight;
                 }
             }
         } else {
@@ -225,12 +228,10 @@ public class MyPhotoView extends ViewGroup {
             return;
         } else {
 
-            int viewItemWidth = getWidth() / 3;
-            int viewItemHeight = getHeight() / 3;
             int row = 0;//行
             int columns = 0;//列
             Log.e(tag, "onLayout width: " + getWidth()+ " height: " + getHeight()
-                    + " ,item width: " + viewItemWidth + " itemheight: " + viewItemHeight);
+                    + " ,item width: " + mViewItemWidth + " itemheight: " + mViewItemHeight);
 
             for (int i = 0; i < count; i++) {
                 row = i / 3;
@@ -238,10 +239,10 @@ public class MyPhotoView extends ViewGroup {
 
                 ImageView view = (ImageView) getChildAt(i);
                 ViewGroup.LayoutParams params = view.getLayoutParams();
-                int left = columns * viewItemWidth;
-                int top = row * viewItemHeight;
-                int right = columns * viewItemWidth + params.width;
-                int bottom = row * viewItemHeight + params.height;
+                int left = columns * mViewItemWidth;
+                int top = row * mViewItemHeight;
+                int right = columns * mViewItemWidth + params.width;
+                int bottom = row * mViewItemHeight + params.height;
                 view.layout(left,top,right,bottom);
 
                 Log.e(tag, "view " + i + ": " + left+ " " + top+ " " + right + " " + bottom);
