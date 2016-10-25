@@ -30,15 +30,15 @@
             android:textColor="#000000" />
 
         <!-- android:background="#008800"
-                c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+                c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
                 c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-                c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-                c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-                c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png"
-                c:url5="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=c9ed63debf0e7bec238f0be51a1e950e/b3fb43166d224f4ad04804c20ef790529922d10a.jpg"
-                c:url6="http://ico.ooopic.com/ajax/iconpng/?id=118743.png"
-                c:url7="http://edu.hntest.org.cn/image/kecheng/JAVA1.jpg"
-                c:url8="http://img12.360buyimg.com/n0/jfs/t2188/325/1904732339/34631/85764e9/568c500aN4c86ba1a.jpg"
+                c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url7="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+                c:url8="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
                 -->
         <com.example.guohl.myuitest.photo.MyPhotoView
             android:layout_width="match_parent"
@@ -47,7 +47,8 @@
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg" />
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
             android:layout_width="match_parent"
@@ -56,105 +57,113 @@
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-            c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-            c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png"
-            c:url5="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=c9ed63debf0e7bec238f0be51a1e950e/b3fb43166d224f4ad04804c20ef790529922d10a.jpg" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-            c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png"
-            c:url5="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=c9ed63debf0e7bec238f0be51a1e950e/b3fb43166d224f4ad04804c20ef790529922d10a.jpg"
-            c:url6="http://ico.ooopic.com/ajax/iconpng/?id=118743.png" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-            c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png"
-            c:url5="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=c9ed63debf0e7bec238f0be51a1e950e/b3fb43166d224f4ad04804c20ef790529922d10a.jpg"
-            c:url6="http://ico.ooopic.com/ajax/iconpng/?id=118743.png"
-            c:url7="http://edu.hntest.org.cn/image/kecheng/JAVA1.jpg" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url7="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
         <com.example.guohl.myuitest.photo.MyPhotoView
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="30dp"
             android:background="#d4d4d4"
             android:clickable="false"
-            c:url0="http://img4.imgtn.bdimg.com/it/u=1185713038,3780772498&amp;fm=21&amp;gp=0.jpg"
+            c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
+            c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
-            c:url2="http://image.tianjimedia.com/uploadImages/2013/059/MRW175H6B501.jpg"
-            c:url3="http://img.25pp.com/uploadfile/soft/images/2015/0225/20150225102450990.jpg"
-            c:url4="http://pic.58pic.com/58pic/15/53/76/25w58PICQsC_1024.png"
-            c:url5="http://a.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=c9ed63debf0e7bec238f0be51a1e950e/b3fb43166d224f4ad04804c20ef790529922d10a.jpg"
-            c:url6="http://ico.ooopic.com/ajax/iconpng/?id=118743.png"
-            c:url7="http://edu.hntest.org.cn/image/kecheng/JAVA1.jpg"
-            c:url8="http://img12.360buyimg.com/n0/jfs/t2188/325/1904732339/34631/85764e9/568c500aN4c86ba1a.jpg" />
+            c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url7="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
+            c:url8="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
     </LinearLayout>
 </ScrollView>

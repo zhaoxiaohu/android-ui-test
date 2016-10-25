@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -27,17 +28,18 @@ import java.util.List;
 
 public class MyPhotoView extends ViewGroup {
 
+    private static final String tag = MyPhotoView.class.getSimpleName();
+
+    protected ImageLoader imageLoader = ImageLoader.getInstance();
+
     private Context context;
     private final static int MAX_COUNT = 9;
     private List<String> urlList = new ArrayList<>(MAX_COUNT);
     private List<ImageView> imageViewList = new ArrayList<>(MAX_COUNT);
-    //
-    protected ImageLoader imageLoader = ImageLoader.getInstance();
-    //
-    private static final String tag = MyPhotoView.class.getSimpleName();
 
     private int mViewItemWidth;
     private int mViewItemHeight;
+    private int mDividerSpacing = 0;// 图片间距
 
     @Override
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
@@ -67,6 +69,11 @@ public class MyPhotoView extends ViewGroup {
 
             int attr = a.getIndex(i);
             switch (attr) {
+                case R.styleable.MyPhotoView_dividerSpacing:{
+                    mDividerSpacing = 0/*a.getDimensionPixelOffset(attr, (int) TypedValue.applyDimension(
+                            TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics()))*/;
+                    break;
+                }
                 case R.styleable.MyPhotoView_url0: {
                     String s = a.getString(attr);
                     if (!TextUtils.isEmpty(s)) {
@@ -150,6 +157,9 @@ public class MyPhotoView extends ViewGroup {
         int width = widthSize;
         int height = heightSize;
 
+        Log.e(tag, "onMeasure widthSize: " + widthSize+" heightSize: " + heightSize);
+
+
         //TODO 缓存View--不多次创建
         removeAllViews();
         if (widthMode == MeasureSpec.EXACTLY) {
@@ -182,8 +192,8 @@ public class MyPhotoView extends ViewGroup {
                     width = widthSize;
                     height = heightSize;
                 } else {
-                    mViewItemWidth = widthSize / 3;
-                    mViewItemHeight = heightSize / 3;
+                    mViewItemWidth = (widthSize - 2 * mDividerSpacing) / 3;
+                    mViewItemHeight = (heightSize - 2 * mDividerSpacing) / 3;
 
                     for (int i = 0; i < size; i++) {
 
@@ -207,7 +217,7 @@ public class MyPhotoView extends ViewGroup {
                     }
                     // 2--9 item view
                     width = widthSize;
-                    height = ((size - 1) / 3 + 1) * mViewItemHeight;
+                    height = ((size - 1) / 3 + 1) * mViewItemHeight+ ((size - 1) / 3)*mDividerSpacing;
                 }
             }
         } else {
@@ -224,13 +234,13 @@ public class MyPhotoView extends ViewGroup {
             ImageView view = (ImageView) getChildAt(0);
             ViewGroup.LayoutParams params = view.getLayoutParams();
             view.layout(0, 0, params.width, params.height);
-            Log.e(tag, "view " + 0 + ": width: " + params.width+ "  height: " + params.height);
+            Log.e(tag, "view " + 0 + ": width: " + params.width + "  height: " + params.height);
             return;
         } else {
 
             int row = 0;//行
             int columns = 0;//列
-            Log.e(tag, "onLayout width: " + getWidth()+ " height: " + getHeight()
+            Log.e(tag, "onLayout width: " + getWidth() + " height: " + getHeight()
                     + " ,item width: " + mViewItemWidth + " itemheight: " + mViewItemHeight);
 
             for (int i = 0; i < count; i++) {
@@ -239,13 +249,13 @@ public class MyPhotoView extends ViewGroup {
 
                 ImageView view = (ImageView) getChildAt(i);
                 ViewGroup.LayoutParams params = view.getLayoutParams();
-                int left = columns * mViewItemWidth;
-                int top = row * mViewItemHeight;
-                int right = columns * mViewItemWidth + params.width;
-                int bottom = row * mViewItemHeight + params.height;
-                view.layout(left,top,right,bottom);
+                int left = columns * (mViewItemWidth+mDividerSpacing);
+                int top = row * (mViewItemHeight + mDividerSpacing);
+                int right = left + params.width;
+                int bottom = top + params.height;
+                view.layout(left, top, right, bottom);
 
-                Log.e(tag, "view " + i + ": " + left+ " " + top+ " " + right + " " + bottom);
+                Log.e(tag, "view " + i + ": " + left + " " + top + " " + right + " " + bottom);
             }
         }
     }

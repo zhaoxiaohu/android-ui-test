@@ -28,5 +28,6 @@
         <attr name="url6" format="string" />
         <attr name="url7" format="string" />
         <attr name="url8" format="string" />
+        <attr name="dividerSpacing" format="dimension"/>
     </declare-styleable>
 </resources>
