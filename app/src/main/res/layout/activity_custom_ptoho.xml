@@ -17,7 +17,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:scrollbars="vertical"
-        tools:context="com.example.guohl.myuitest.photo.MyPtohoActivity">
+        tools:context=".customview.ViewGroup.MyPtohoActivity">
 
 
         <TextView
@@ -40,7 +40,7 @@
                 c:url7="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
                 c:url8="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
                 -->
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -50,7 +50,7 @@
             c:dividerSpacing="@dimen/photo_view_item_divider_spacing"
             c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -61,7 +61,7 @@
             c:url0="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -73,7 +73,7 @@
             c:url1="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -86,7 +86,7 @@
             c:url2="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -100,7 +100,7 @@
             c:url3="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -115,7 +115,7 @@
             c:url4="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -131,7 +131,7 @@
             c:url5="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"
@@ -148,7 +148,7 @@
             c:url6="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg"
             c:url7="http://img.25pp.com/uploadfile/soft/images/2014/1030/20141030042059174.jpg" />
 
-        <com.example.guohl.myuitest.photo.MyPhotoView
+        <com.example.guohl.myuitest.customview.ViewGroup.MyPhotoView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_centerInParent="true"

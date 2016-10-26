@@ -1,15 +1,18 @@
-package com.example.guohl.myuitest.photo;
+package com.example.guohl.myuitest.customview.base;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.guohl.myuitest.R;
 
-public class MyPtohoActivity extends Activity {
+/**
+ * Created by guohl on 2016/9/18.
+ */
+public class CustomViewActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_ptoho);
+        setContentView(R.layout.custom_view_activity);
     }
 }

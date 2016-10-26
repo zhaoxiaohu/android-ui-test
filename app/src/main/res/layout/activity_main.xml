@@ -53,4 +53,12 @@
         android:layout_marginTop="20dp"
         android:text="测试Activity切换生命周期"
         android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/btnViewEvent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="测试View时间传递"
+        android:textColor="@android:color/black" />
 </LinearLayout>

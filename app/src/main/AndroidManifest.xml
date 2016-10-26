@@ -44,10 +44,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".customview.CustomViewActivity" />
-        <activity android:name=".photo.MyPtohoActivity" />
+        <activity android:name=".customview.base.CustomViewActivity" />
+        <activity android:name=".customview.ViewGroup.MyPtohoActivity" />
         <activity android:name=".activitySwitch.FirstActivity" />
-        <activity android:name=".activitySwitch.SecondActivity"></activity>
+        <activity android:name=".activitySwitch.SecondActivity" />
+        <activity android:name=".view.ViewEventActivity"></activity>
+        <activity android:name=".view.ViewTestActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.guohl.myuitest.view.TouchLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        tools:context="com.example.touch_event.MainActivity"
+        tools:ignore="MergeRootFrame">
+
+        <com.example.guohl.myuitest.view.TouchTv
+            android:id="@+id/my_button"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="#00aa00"
+            android:gravity="center"
+            android:text="hello world"
+            android:textSize="30sp">
+
+        </com.example.guohl.myuitest.view.TouchTv>
+    </com.example.guohl.myuitest.view.TouchLayout>
+
+</LinearLayout>

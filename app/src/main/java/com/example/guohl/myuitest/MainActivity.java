@@ -11,8 +11,10 @@ import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.example.guohl.myuitest.activitySwitch.FirstActivity;
-import com.example.guohl.myuitest.customview.CustomViewActivity;
-import com.example.guohl.myuitest.photo.MyPtohoActivity;
+import com.example.guohl.myuitest.customview.base.CustomViewActivity;
+import com.example.guohl.myuitest.customview.ViewGroup.MyPtohoActivity;
+import com.example.guohl.myuitest.view.ViewEventActivity;
+import com.example.guohl.myuitest.view.ViewTestActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -34,7 +36,7 @@ public class MainActivity extends Activity {
         webView.addJavascriptInterface(new WebAppInterface(this), "Android");
     }
 
-    @OnClick({R.id.btnCustomView0, R.id.btnCustomViewWeiXinPhoto, R.id.btnActivitySwitch})
+    @OnClick({R.id.btnCustomView0, R.id.btnCustomViewWeiXinPhoto, R.id.btnActivitySwitch, R.id.btnViewEvent})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnCustomView0:
@@ -45,6 +47,10 @@ public class MainActivity extends Activity {
                 break;
             case R.id.btnActivitySwitch:
                 startActivity(new Intent(MainActivity.this, FirstActivity.class));
+                break;
+            case R.id.btnViewEvent:
+                startActivity(new Intent(MainActivity.this, ViewTestActivity.class));
+//                startActivity(new Intent(MainActivity.this, ViewEventActivity.class));
                 break;
         }
     }

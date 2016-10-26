@@ -1,4 +1,4 @@
-package com.example.guohl.myuitest.customview;
+package com.example.guohl.myuitest.customview.base;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,4 +1,4 @@
-package com.example.guohl.myuitest.imageloader;
+package com.example.guohl.myuitest.other.imageloader;
 
 import android.graphics.Bitmap;
 

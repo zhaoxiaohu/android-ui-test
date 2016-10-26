@@ -1,4 +1,4 @@
-package com.example.guohl.myuitest.photo;
+package com.example.guohl.myuitest.customview.ViewGroup;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -17,7 +17,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
