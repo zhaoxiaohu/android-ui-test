@@ -3,8 +3,8 @@
     package="com.example.guohl.myuitest">
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
-    <!--share sdk-->
-    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <!-- share sdk -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <!-- <uses-permission android:name="android.permission.READ_PROFILE" /> -->
@@ -45,7 +45,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".customview.CustomViewActivity" />
-        <activity android:name=".photo.CustomPtohoActivity"></activity>
+        <activity android:name=".photo.MyPtohoActivity" />
+        <activity android:name=".activitySwitch.FirstActivity" />
+        <activity android:name=".activitySwitch.SecondActivity"></activity>
     </application>
 
 </manifest>

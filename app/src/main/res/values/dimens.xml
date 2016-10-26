@@ -3,5 +3,5 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="photo_view_item_divider_spacing">0dp</dimen>
+    <dimen name="photo_view_item_divider_spacing">2dp</dimen>
 </resources>

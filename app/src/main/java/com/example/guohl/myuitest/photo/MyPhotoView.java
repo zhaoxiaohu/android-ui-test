@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.guohl.myuitest.R;
-import com.example.guohl.myuitest.imageloader.DisplayImgOpt;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
@@ -39,7 +37,10 @@ public class MyPhotoView extends ViewGroup {
 
     private int mViewItemWidth;
     private int mViewItemHeight;
-    private int mDividerSpacing = 0;// 图片间距
+    private final static int DIVIDER_SPACING_DEFAULT = 2;//dp
+    private int mDividerSpacing = (int) TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, DIVIDER_SPACING_DEFAULT, getResources().getDisplayMetrics());
+    ;// 图片间距
 
     @Override
     public ViewGroup.LayoutParams generateLayoutParams(AttributeSet attrs) {
@@ -63,15 +64,13 @@ public class MyPhotoView extends ViewGroup {
         TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.MyPhotoView, defStyleAttr, 0);
         int n = a.getIndexCount();
         for (int i = 0; i < n; i++) {
-            if (urlList.size() >= 9) {
-                break;
-            }
 
             int attr = a.getIndex(i);
             switch (attr) {
-                case R.styleable.MyPhotoView_dividerSpacing:{
-                    mDividerSpacing = 0/*a.getDimensionPixelOffset(attr, (int) TypedValue.applyDimension(
-                            TypedValue.COMPLEX_UNIT_DIP, 0, getResources().getDisplayMetrics()))*/;
+                case R.styleable.MyPhotoView_dividerSpacing: {
+                    mDividerSpacing = a.getDimensionPixelOffset(attr, (int) TypedValue.applyDimension(
+                            TypedValue.COMPLEX_UNIT_DIP, DIVIDER_SPACING_DEFAULT, getResources().getDisplayMetrics()));
+//                    Log.i(tag, "MyPhotoView_dividerSpacing defValue: " + defValue +" mDividerSpacing: " + mDividerSpacing);
                     break;
                 }
                 case R.styleable.MyPhotoView_url0: {
@@ -137,17 +136,14 @@ public class MyPhotoView extends ViewGroup {
                     }
                     break;
                 }
-
             }
         }
         a.recycle();      /**      * 获得绘制文本的宽和高      */
-
-        Log.e(tag, "urls: " + Arrays.toString(urlList.toArray()));
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        Log.e(tag, "onMeasure");
+        Log.i(tag, "onMeasure");
 
 //        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -157,14 +153,12 @@ public class MyPhotoView extends ViewGroup {
         int width = widthSize;
         int height = heightSize;
 
-        Log.e(tag, "onMeasure widthSize: " + widthSize+" heightSize: " + heightSize);
+        Log.i(tag, "onMeasure widthSize: " + widthSize + " heightSize: " + heightSize);
 
-
-        //TODO 缓存View--不多次创建
         removeAllViews();
         if (widthMode == MeasureSpec.EXACTLY) {
 
-            Log.e(tag, "MeasureSpec.EXACTLY");
+            Log.i(tag, "MeasureSpec.EXACTLY");
 
             // 子view测量
             int size = urlList.size();
@@ -186,6 +180,7 @@ public class MyPhotoView extends ViewGroup {
                         params.height = heightSize;
                     }
                     v.setLayoutParams(params);
+                    setImageViewDisplayAttribute(v);
                     addView(v);
 
                     // 1 item view
@@ -204,7 +199,7 @@ public class MyPhotoView extends ViewGroup {
                             v = new ImageView(context);
                             imageViewList.add(i, v);
                         }
-//                        ImageView v = new ImageView(context);
+                        setImageViewDisplayAttribute(v);
                         LayoutParams params = v.getLayoutParams();
                         if (params == null) {
                             params = new ViewGroup.LayoutParams(mViewItemWidth, mViewItemHeight);
@@ -217,7 +212,7 @@ public class MyPhotoView extends ViewGroup {
                     }
                     // 2--9 item view
                     width = widthSize;
-                    height = ((size - 1) / 3 + 1) * mViewItemHeight+ ((size - 1) / 3)*mDividerSpacing;
+                    height = ((size - 1) / 3 + 1) * mViewItemHeight + ((size - 1) / 3) * mDividerSpacing;
                 }
             }
         } else {
@@ -228,19 +223,19 @@ public class MyPhotoView extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        Log.e(tag, "onLayout");
+        Log.i(tag, "onLayout");
         int count = getChildCount();
         if (1 == count) {
             ImageView view = (ImageView) getChildAt(0);
             ViewGroup.LayoutParams params = view.getLayoutParams();
             view.layout(0, 0, params.width, params.height);
-            Log.e(tag, "view " + 0 + ": width: " + params.width + "  height: " + params.height);
+            Log.i(tag, "view " + 0 + ": width: " + params.width + "  height: " + params.height);
             return;
         } else {
 
             int row = 0;//行
             int columns = 0;//列
-            Log.e(tag, "onLayout width: " + getWidth() + " height: " + getHeight()
+            Log.i(tag, "onLayout width: " + getWidth() + " height: " + getHeight()
                     + " ,item width: " + mViewItemWidth + " itemheight: " + mViewItemHeight);
 
             for (int i = 0; i < count; i++) {
@@ -249,13 +244,13 @@ public class MyPhotoView extends ViewGroup {
 
                 ImageView view = (ImageView) getChildAt(i);
                 ViewGroup.LayoutParams params = view.getLayoutParams();
-                int left = columns * (mViewItemWidth+mDividerSpacing);
+                int left = columns * (mViewItemWidth + mDividerSpacing);
                 int top = row * (mViewItemHeight + mDividerSpacing);
                 int right = left + params.width;
                 int bottom = top + params.height;
                 view.layout(left, top, right, bottom);
 
-                Log.e(tag, "view " + i + ": " + left + " " + top + " " + right + " " + bottom);
+//                Log.i(tag, "view " + i + ": " + left + " " + top + " " + right + " " + bottom);
             }
         }
     }
@@ -268,7 +263,7 @@ public class MyPhotoView extends ViewGroup {
     @Override
     protected void onDraw(Canvas canvas) {
 
-        Log.e(tag, "onDraw");
+        Log.i(tag, "onDraw");
 
         super.onDraw(canvas);
 
@@ -288,24 +283,29 @@ public class MyPhotoView extends ViewGroup {
                         super.onLoadingComplete(imageUri, view, loadedImage);
                         ((ImageView) view).setImageBitmap(loadedImage);
                         view.postInvalidate();
-                        Log.e(tag, "CCCCCCCCCC " + imageUri + " data: " + ((loadedImage == null) ? "null" : loadedImage.toString()));
                     }
                 });
             }
         }
     }
 
-//    @Override
-//    protected void onAttachedToWindow() {
-//        super.onAttachedToWindow();
-//    }
-//
-//    @Override
-//    protected void onDetachedFromWindow() {
-//        super.onDetachedFromWindow();
-//
-//        if (imageLoader != null) {
-//            imageLoader.stop();
-//        }
-//    }
+    @Override
+    protected void onAttachedToWindow() {
+        Log.i(tag, "onAttachedToWindow");
+        super.onAttachedToWindow();
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        Log.i(tag, "onDetachedFromWindow");
+        super.onDetachedFromWindow();
+        if (imageLoader != null) {
+            imageLoader.stop();
+        }
+    }
+
+    private void setImageViewDisplayAttribute(ImageView v) {
+//        v.setBackgroundColor(context.getResources().getColor(R.color.colorAccent));
+        v.setScaleType(ImageView.ScaleType.FIT_XY);
+    }
 }

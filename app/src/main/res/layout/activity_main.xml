@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:c="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -11,15 +12,45 @@
     tools:context="com.example.guohl.myuitest.MainActivity">
 
     <Button
-        android:id="@+id/btnNext"
+        android:id="@+id/btnCustomView0"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="Next"
+        android:layout_height="50dp"
+        android:text="CustomView"
         android:textColor="@android:color/black" />
 
-    <WebView
-        android:id="@+id/webview"
+    <Button
+        android:id="@+id/btnCustomViewWeiXinPhoto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/btnNext"></WebView>
-</RelativeLayout>
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="仿微信朋友圈照片展示View"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Js与Java互调"
+            android:textColor="@android:color/black" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@+id/btnNext"></WebView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnActivitySwitch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:text="测试Activity切换生命周期"
+        android:textColor="@android:color/black" />
+</LinearLayout>
